@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="L'Escaudais — cuisine de terroir, regard contemporain. Restaurant à Escaudes, Gironde. Réouverture le 10 octobre 2026.">
+  <title>L'Escaudais — Cuisine de terroir, regard contemporain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f3efe6;
+      --ink:#20231f;
+      --muted:#6d7067;
+      --green:#27352d;
+      --line:rgba(32,35,31,.16);
+      --accent:#a56745;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(calc(100% - 48px),var(--max));margin:auto}
+    .mono{font-family:"DM Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+    h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:500;line-height:1.05;margin:0}
+    h1{font-size:clamp(4.2rem,12vw,9.5rem);letter-spacing:-.055em}
+    h2{font-size:clamp(2.8rem,6vw,5.7rem);letter-spacing:-.045em}
+    p{max-width:62ch}
+    .nav{position:absolute;z-index:5;top:0;left:0;right:0;color:#f4f0e7}
+    .nav-inner{height:86px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Playfair Display",Georgia,serif;font-size:1.35rem}
+    .nav-links{display:flex;gap:28px;font-size:.82rem}
+    .hero{min-height:92vh;background:var(--green);color:#f4f0e7;display:grid;align-items:end;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 35%,rgba(0,0,0,.28))}
+    .hero-photo{position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(39,53,45,.92) 0%,rgba(39,53,45,.60) 43%,rgba(39,53,45,.2) 100%),
+      radial-gradient(circle at 78% 42%,#8c806e 0,#4d5549 25%,#29342d 58%,#20251f 100%);}
+    .hero-content{position:relative;z-index:1;padding:150px 0 72px}
+    .hero-kicker{margin-bottom:22px}
+    .hero h1{max-width:850px}
+    .hero-sub{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.35rem,2.4vw,2rem);max-width:590px;margin:28px 0 42px}
+    .hero-meta{display:flex;gap:14px;flex-wrap:wrap}
+    .pill{border:1px solid rgba(244,240,231,.35);padding:10px 14px;border-radius:999px;font-size:.78rem}
+    .section{padding:120px 0}
+    .intro{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:start}
+    .intro-copy{font-size:1.2rem}
+    .intro-copy strong{font-family:"Playfair Display",Georgia,serif;font-size:1.5em;font-weight:500}
+    .rule{height:1px;background:var(--line);margin:28px 0}
+    .eyebrow{color:var(--muted);margin-bottom:20px}
+    .quote{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.8rem,3.5vw,3.4rem);max-width:760px}
+    .dark{background:var(--green);color:#f4f0e7}
+    .dark .eyebrow{color:#b9beb5}
+    .dark .rule{background:rgba(244,240,231,.18)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{min-height:520px;padding:42px;display:flex;flex-direction:column;justify-content:flex-end;background:#ded7ca}
+    .card:nth-child(2){background:#d4ddd4}
+    .card h3{font-size:2.7rem;margin-bottom:14px}
+    .card p{margin:0;color:#3e423d}
+    .people{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+    .person-name{font-size:clamp(2.8rem,5vw,5rem);margin:8px 0 20px}
+    .placeholder-photo{aspect-ratio:4/5;background:
+      linear-gradient(135deg,rgba(39,53,45,.15),rgba(165,103,69,.18)),
+      #d9d1c4;display:flex;align-items:flex-end;padding:22px;color:rgba(32,35,31,.55)}
+    .placeholder-photo span{font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+    .food-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:20px;margin-top:55px}
+    .food-main,.food-side{min-height:460px;background:#d8d0c3;padding:34px;display:flex;align-items:flex-end}
+    .food-side{min-height:220px}
+    .food-grid > div:nth-child(3){grid-column:2}
+    .food-label{background:rgba(243,239,230,.9);padding:13px 16px;display:inline-block}
+    .menu{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:60px}
+    .menu-item{padding:18px 0;border-top:1px solid var(--line)}
+    .menu-item h3{font-size:1.5rem;margin-bottom:5px}
+    .menu-item p{margin:0;color:var(--muted);font-size:.92rem}
+    .info{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+    .big-contact{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.4rem,5vw,5rem);margin-top:18px}
+    .footer{padding:35px 0;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;background:var(--ink);color:var(--paper);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+    .dark .btn{background:var(--paper);color:var(--ink)}
+    @media(max-width:800px){
+      .wrap{width:min(calc(100% - 32px),var(--max))}
+      .nav-links{display:none}
+      .hero{min-height:88vh}
+      .intro,.people,.split,.info,.menu,.food-grid{grid-template-columns:1fr;gap:38px}
+      .food-grid > div:nth-child(3){grid-column:auto}
+      .card{min-height:390px}
+      .section{padding:82px 0}
+      .hero-content{padding-bottom:52px}
+      .hero h1{font-size:clamp(4rem,20vw,7rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#">L'Escaudais</a>
+      <nav class="nav-links">
+        <a href="#cuisine">La cuisine</a>
+        <a href="#equipe">L'équipe</a>
+        <a href="#lieu">Le lieu</a>
+        <a href="#infos">Infos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="wrap hero-content">
+        <div class="mono hero-kicker">Escaudes · Gironde</div>
+        <h1>L'Escaudais</h1>
+        <p class="hero-sub">Cuisine de terroir.<br>Regard contemporain.</p>
+        <div class="hero-meta">
+          <span class="pill">Réouverture · 10.10.2026</span>
+          <span class="pill">40 couverts · terrasse couverte</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap intro">
+        <div>
+          <div class="mono eyebrow">Une nouvelle page</div>
+          <h2>Le terroir,<br>autrement.</h2>
+        </div>
+        <div class="intro-copy">
+          <p><strong>L'Escaudais revient.</strong></p>
+          <p>Une adresse de village, une nouvelle équipe, une cuisine pensée pour aujourd'hui.</p>
+          <p>Jonas Delahaye et Erwan Coïc reprennent L'Escaudais avec une idée simple : faire vivre un lieu où l'on vient pour bien manger, prendre son temps et discuter autour d'une table.</p>
+          <p>Une cuisine généreuse, inspirée par le terroir et les saisons, avec le regard contemporain de Jonas, passé notamment par le Calix à Bordeaux.</p>
+          <div class="rule"></div>
+          <a class="btn" href="#infos">Préparer ma venue</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="cuisine">
+      <div class="wrap">
+        <div class="mono eyebrow">La cuisine</div>
+        <p class="quote">« Accessible dans l'ambiance. Exigeante dans l'assiette. »</p>
+        <div class="food-grid">
+          <div class="food-main"><div class="food-label">Produits · saisons · générosité</div></div>
+          <div class="food-side"><div class="food-label">Tradition &amp; inspiration</div></div>
+          <div class="food-side"><div class="food-label">Une carte qui évolue</div></div>
+        </div>
+        <div class="menu">
+          <div>
+            <div class="mono eyebrow">À la carte</div>
+            <div class="menu-item"><h3>Entrées</h3><p>À compléter selon la carte d'ouverture.</p></div>
+            <div class="menu-item"><h3>Plats</h3><p>Une cuisine de terroir, généreuse et actuelle.</p></div>
+          </div>
+          <div>
+            <div class="mono eyebrow">À table</div>
+            <div class="menu-item"><h3>Desserts</h3><p>À compléter selon la carte d'ouverture.</p></div>
+            <div class="menu-item"><h3>Prix</h3><p>Environ 15–30 € · tarifs définitifs à venir.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="wrap">
+        <div class="mono eyebrow">Derrière L'Escaudais</div>
+        <div class="people">
+          <div>
+            <div class="placeholder-photo"><span>Photo Jonas à remplacer</span></div>
+            <div class="mono eyebrow" style="margin-top:25px">Cuisine</div>
+            <h2 class="person-name">Jonas<br>Delahaye</h2>
+            <p>Une expérience acquise en cuisine, notamment au Calix à Bordeaux, et l'envie de revenir à une cuisine vivante, généreuse et ancrée dans son territoire.</p>
+          </div>
+          <div>
+            <div class="placeholder-photo"><span>Photo Erwan à remplacer</span></div>
+            <div class="mono eyebrow" style="margin-top:25px">Salle · projet</div>
+            <h2 class="person-name">Erwan<br>Coïc</h2>
+            <p>Avec Jonas, il imagine un lieu où la qualité de l'assiette va de pair avec une atmosphère simple, chaleureuse et contemporaine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lieu">
+      <div class="wrap intro">
+        <div>
+          <div class="mono eyebrow">Le lieu</div>
+          <h2>Un restaurant de village. À notre manière.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>À Escaudes, L'Escaudais retrouve ses tables, sa terrasse couverte et son rythme.</p>
+          <p>Un endroit calme pour déjeuner, dîner, travailler, retrouver des amis ou simplement prendre le temps.</p>
+          <p>Le village est ici. L'assiette regarde un peu plus loin.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="infos">
+      <div class="wrap info">
+        <div>
+          <div class="mono eyebrow">Réouverture</div>
+          <h2>10 octobre<br>2026</h2>
+          <p>Les horaires et modalités de réservation seront annoncés très prochainement.</p>
+          <a class="btn" href="tel:0000000000">Réserver · numéro à venir</a>
+        </div>
+        <div>
+          <div class="mono eyebrow">Nous trouver</div>
+          <p class="big-contact">L'Escaudais<br>Escaudes, Gironde</p>
+          <p>Terrasse couverte · environ 40 couverts</p>
+          <div class="rule"></div>
+          <p class="mono">Facebook · Instagram à venir</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <span>L'ESCAUDAIS · ESCAUDES</span>
+      <span>© 2026 L'Escaudais</span>
+    </div>
+  </footer>
+</body>
+</html>
